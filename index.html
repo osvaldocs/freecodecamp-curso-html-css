@@ -15,51 +15,55 @@
 
       <hr>
       <h3>Listas de Gatos</h3>
+      <div>
+        <p>Cosas que los gatos <strong><em>aman</em></strong>:</p>
 
-      <p>Cosas que los gatos <strong><em>aman</em></strong>:</p>
+        <!-- Para crear listas se usa <ul></ul> -->
+        <ul>
+          <!-- Dentro de la lista(ul) se ingresan las listas <li></li> -->
+          <li>Menta gatuna</li>
+          <li>Apuntadores láser</li>
+          <li><s>Salsa</s></li>
+        </ul>
+        <img src="salsa.jpg" alt="Imagen de una salsa bolognesa deliciosa">
 
-      <!-- Para crear listas se usa <ul></ul> -->
-      <ul>
-        <!-- Dentro de la lista(ul) se ingresan las listas <li></li> -->
-        <li>Menta gatuna</li>
-        <li>Apuntadores láser</li>
-        <li><s>Salsa</s></li>
-      </ul>
-      <img src="salsa.jpg" alt="Imagen de una salsa bolognesa deliciosa">
-
-      <p>Cosas que los gatos <strong>odian</strong>:</p>
-      <ol>
-        <li>Tratamiento antipulgas</li>
-        <li>Truenos</li>
-        <li>Otros gatos</li>
-      </ol>
-      <img src="gatos.jpg"><br>
+        <p>Cosas que los gatos <strong>odian</strong>:</p>
+        <ol>
+          <li>Tratamiento antipulgas</li>
+          <li>Truenos</li>
+          <li>Otros gatos</li>
+        </ol>
+      </div>
+      <img src="gatos.jpg" alt="Imagen de gatitos jugando"><br>
 
 
       <form action="/enviar-respuesta">
         <!-- input boton de radio: Boton de opcíon, permite marcar el boton con click. luego de >Interior (es el texto luego del boton) El atributo name del input lo que hace es agrupar varios boton del radio con el mismo name y permitir la eleccion de un solo boton de radio-->
-        <input type="radio" name="preferenciaGato">Interior
+        <label for="interior"><input type="radio" value="interior" name="preferenciaGato" checked>Interior</label>
 
         <br>  <!-- Salto de linea -->
 
         <!-- Rodeamos al boton de radio con etiqueta label, que permite que si hacemos click/tap en el texto se marca el boton de radio -->
-        <label><input type="radio" name="preferenciaGato">Exterior</label><br><!-- Los saltos de linea tambien pueden agregarse al final de la sentencia -->
+        <label><input type="radio" value="exterior" name="preferenciaGato">Exterior</label><br><!-- Los saltos de linea tambien pueden agregarse al final de la sentencia -->
 
         <!-- Se agrega un id al input, en el tag lable se agrega el atributo for seguido del id, para asociar las etiquetas con el boton de radio -->
-        <input for="ambas" id="ambas" type="radio" name="preferenciaGato">Ambas<br>
+        <input for="ambas" id="ambas" type="radio" name="preferenciaGato">Ambas
+        <br>
 
         <!-- Casillas de verificacion o chechbox -->
-        <label for="carinoso"><input id="carinoso" type="checkbox">Cariñoso</label>
-        <label for="perezoso"><input id="perezoso" type="checkbox">Perezoso</label>
-        <label for="energico"><input id="energico" type="checkbox">Enérgico</label><br>
+        <label for="carinoso"><input id="carinoso" type="checkbox" name="personalidad" checked value="carinoso">Cariñoso</label>
+        <label for="perezoso"><input id="perezoso" type="checkbox" name="personalidad" value="perezoso">Perezoso</label>
+        <label for="energico"><input id="energico" type="checkbox" name="personalidad" value="energico">Enérgico</label>
+        <br>
 
         <!-- siguiente linea: input de texto: formulario con el atributo placeholder, que funciona para orientar que debe llenar el usuario. El atributo required hace que completar el campo sea obligatorio -->
         <input type="text" placeholder="URL de la foto de tu gato" required>
         <button type="submit">Enviar</button><br>
-
-
       </form>
 
     </main>
+    <footer>
+      <p><small>Sin derecho de autor- <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freecodecamp.org</a></small></p>
+    </footer>
   </body>
 </html> 
